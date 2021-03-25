@@ -12,7 +12,7 @@ const raisedToTheThird = (arr) => {
   const answerRaisedToTheThird = [];
   arr.forEach(function(value, i) {
     answerRaisedToTheThird.push(Math.pow(value, 3))
-};
+}
 return (answerRaisedToTheThird);
 
 /* ------------------------------------------------------------------------------------------------
