@@ -8,11 +8,11 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   let newArry = [];
-  arr.forEach((value) => {
-    newArry.push(number + 2);
-  });
+   for(let i =0; i < arr.length; i++) {
+    let sumNumber = arr.[i] + 2;
+    newArry.push(sumNumber);
+  }
   return answer;
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,10 +22,10 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const typeNum = (arr) => {
-  let numArry = arr.filter(each => typeof each === 'number');
-  return(numArry);
-};
+  function typeNum(arr) {
+    let numArry = arr.filter(each => typeof each === 'number');
+    return (numArry);
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
