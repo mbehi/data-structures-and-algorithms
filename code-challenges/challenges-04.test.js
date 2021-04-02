@@ -22,7 +22,9 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  const newArr= [];
+  arr.map(item => newArr.push(callback(item)));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +87,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
