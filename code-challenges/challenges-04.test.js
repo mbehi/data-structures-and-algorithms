@@ -101,7 +101,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  let sortByPrice=arr.sort(a,b) => parseFloat(a.price) - parseFloat(b.price);
+  let sortByPrice = arr.sort((a,b) => parseFloat(a.price) - parseFloat(b.price));
   return sortByPrice;
 };
 /* ------------------------------------------------------------------------------------------------
