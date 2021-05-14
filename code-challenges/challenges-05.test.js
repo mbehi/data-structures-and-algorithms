@@ -13,6 +13,8 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
+  let toLastNames = people.map(person => `${person.firstName} ${person.lastName}`);
+  return toLastNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+  let addValues = arr.reduce((answerSoFar, currentValue) => answerSoFar + currentValue, 0);
+  return addValues;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,6 +44,8 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  let addPurchases = arr.reduce((answerSoFar,currentValue) => answerSoFar + currentValue.purchasePrice, 0);
+  return addPurchases;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +58,8 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  let countNumberOfElements = arr.reduce((element) => element + 1);
+  return countNumberOfElements;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +120,11 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let returnNames = arr.reduce((x,y) => {
+    x.push(y.name);
+    return x;
+  },[]);
+  return returnNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -124,6 +137,8 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let reversedString = str.split('').reduce((rev,char) => char + rev, '');
+  return reversedString;
 };
 
 /* ------------------------------------------------------------------------------------------------
