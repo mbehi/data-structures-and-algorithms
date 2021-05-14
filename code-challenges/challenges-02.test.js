@@ -11,7 +11,7 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 const raisedToTheThird = (arr) => {
   // Solution code here...
   const answerRaisedToTheThird=[];
-  arr.forEach(function(value,i)) {
+  arr.forEach(function(value,i) {
     answerRaisedToTheThird.push(Math.pow(value,3));
   });
   return answerRaisedToTheThird;
@@ -20,7 +20,7 @@ const raisedToTheThird = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
@@ -37,6 +37,8 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
+  let addQuestion=arr.map(addQuestion=>addQuestion+'?');
+  return addQuestion;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,6 +53,11 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+  const arrayofIntegers=[];
+  for(let i in arr){
+    arrayofIntegers.push(Math.pow(2,arr[i]));
+  }
+  return arrayofIntegers;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,6 +68,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  const forEachOutPutArray=[];
+  arr.forEach(sameOutPutArray=>forEachOutPutArray.push(Math.pow(2,sameOutPutArray)));
+  return forEachOutPutArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,6 +81,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  let continueArray=arr.map(valueArray=>(Math.pow(2,valueArray)));
+  return continueArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
