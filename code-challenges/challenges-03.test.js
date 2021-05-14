@@ -8,6 +8,12 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
+  let addTwoNewArray=[];
+  for(let i=0; i<arr.length; i++) {
+    let addNumber=arr.[i]+2;
+    addTwoNewArray.push(addNumber);
+  }
+  return addTwoNewArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +26,8 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+  let inputArray=arr.filter(each=>typeof each==='number');
+  return inputArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +40,8 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  let containsAnd = arr.filter(string=>string.indexOf('and')!==-1);
+  return containsAnd;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +54,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  let oddValues = arr.filter(input=>input%2 !==0);
+  return oddValues;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +68,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  let notInFirstArray = arr.filter(input=>!forbiddenValues.includes(input));
+  return notInFirstArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
