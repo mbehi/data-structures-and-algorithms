@@ -26,6 +26,8 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
+  let sortStarWarsCharacters = starWarsArr.sort((a,b) => parseInt(b.height) - parseInt(a.height));
+  return sortStarWarsCharacters;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,6 +38,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+  let removeThree = arr.splice(idx,3);
+  return (removeThree, arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +50,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
+  let joinArray = arr.join(' ');
+  return joinArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +70,9 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
+  for (let i=0; i <= str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -77,6 +86,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  let wordsToCharList = arr.split('');
+  return wordsToCharList;
 };
 
 
@@ -124,6 +135,10 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(item => {
+    let entry = item.indexOf(' ');
+    result.push(item.slice(item.indexOf(' ', entry + 1), item.length).trim());
+  });
   return result;
 };
 
