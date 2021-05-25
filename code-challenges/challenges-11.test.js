@@ -5,13 +5,13 @@ CHALLENGE 1 - Review
 
 Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
-For example: 
+For example:
 {
   name: 'bob',
   age: 32
 }
 
-Becomes: 
+Becomes:
 [
 <li>name: bob</li>,
 <li>age: 32</li>
@@ -20,6 +20,11 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  const keyValuePairs = [];
+  for (let [key, value] of Object.entries(obj)) {
+    keyValuePairs.push(`<li>${key}: ${value}</li>`);
+  }
+  return keyValuePairs;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +39,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let arrayofArrays =[];
+  input.map((i) => {
+    i.map((j) => {
+      if (j === target) {
+        arrayofArrays.push(1);
+      }
+    });
+  });
+  return arrayofArrays.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +62,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let totalSum = 0;
+  input.map((i) => {
+    i.map((j) => {
+      totalSum = j + totalSum;
+    });
+  });
+  return totalSum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,10 +85,16 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  let arrayofArrays = [];
+  for (let i=0; i < input.length; i++) {
+    let inputArray = input[i];
+    arrayofArrays.push(inputArray.filter(num => ((num % 5 === 0) && typeof (num) === 'number')).map(num => Math.pow(2, num)));
+  }
+  return arrayofArrays;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -130,16 +157,20 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let result = data.filter((char) => char.gender === 'male' || char.gender === 'female').map((character => character.name)).join(' and ');
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
   // Solution code here...
+  let answer = data.filter(character => character.height).reduce((a,b) => (b.height > a.height ? b : a));
+  return answer.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
