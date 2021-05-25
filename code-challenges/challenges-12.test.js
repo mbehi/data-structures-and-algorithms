@@ -8,6 +8,8 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
+  let replaceZeros = string.replace(/0/g, 'zero');
+  return replaceZeros;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +22,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+  let validatePin = /^\d{4}$/;
+  return validatePin.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +36,8 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
+  let validateWord = /^[a-zA-Z]{5,10}$/;
+  return validateWord.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +50,8 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let hasNumber = /[a-zA-Z]\d+/;
+  return hasNumber.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +72,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let validateEmail = /^[a-zA-Z0-9]+\.?[a-zA-Z0-0-9]+@[a-zA-Z]+\.?[a-zA-Z0-0]\.com$|[a-zA-z0-9]+\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\.?[a-zA-z0-9]\.net|[a-zA-Z0-9]+\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\.?[a-zA-Z0-9]\.org/;
+  return validateEmail.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,6 +99,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let validatePhoneNumber = /^(\((\d{3})\)[\s]?|(\d{3})[\s-]?)(\d{3})[\s-]?(\d{4})$/;
+  return validatePhoneNumber.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
